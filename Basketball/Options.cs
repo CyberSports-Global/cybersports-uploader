@@ -13,11 +13,14 @@ namespace Basketball
         
         public string LiveHtmlPath => Path.Combine(OutputFolder, "live.html");
         public string BoxHtmlPath => Path.Combine(OutputFolder, "box.html");
+        public string PlayByPlayHtmlPath => Path.Combine(OutputFolder, "playbyplay.html");
 
-        [Option("LeftImageUrl", Required = false, HelpText = "Url for the image to show on the left hand side")]
-        public string LeftImagePath { get; set; }
-        [Option("RightImagePath", Required = false, HelpText = "Url for the image to show on the right hand side")]
-        public string RightImagePath { get; set; }
+        [Option("LeftHtml", Required = false, HelpText = "Url for the image to show on the left hand side")]
+        public string LeftHtml { get; set; }
+        [Option("RightHtml", Required = false, HelpText = "Url for the image to show on the right hand side")]
+        public string RightHtml { get; set; }
+        [Option("CssUrl", Required = false, HelpText = "Url for the css file")]
+        public string CssUrl { get; set; }
         [Option("CenterHtml", Required = false, HelpText = "Html for the center")]
         public string CenterHtml { get; set; }
 
@@ -29,12 +32,14 @@ namespace Basketball
         public string FtpLiveFile { get; set; }
         [Option("FTP.BoxFileName", Required = false, HelpText = "The file name to upload the box score as", Default = "box.html")]
         public string FtpBoxFile { get; set; }
+        [Option("FTP.PlayByPlayFileName", Required = false, HelpText = "The file name to upload the box score as", Default = "playbyplay.html")]
+        public string FtpPlayByPlayFile { get; set; }
         [Option("FTP.Username", Required = true, HelpText = "The username to user to connect to the FTP server")] 
         public string FtpUsername { get; set; }
         [Option("FTP.Password", Required = true, HelpText = "The password to connect to the FTP server")] 
         public string FtpPassword { get; set; }
 
-        [Option("AnalyticId", Required = false, HelpText = "Google Analytic Id to use for the web cast, if not provided it will not use analytics")]
+        [Option("AnalyticId", Required = false, HelpText = "Google Analytic Id to use for the web cast, if not provided it will not use analytic")]
         public string AnalyticId { get; set; }
 
         [Option('v', "verbose", Required = false, HelpText = "Set output to verbose messages.")]

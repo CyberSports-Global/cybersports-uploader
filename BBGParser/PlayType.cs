@@ -1,0 +1,42 @@
+﻿using System.Runtime.Serialization;
+
+namespace BBGParser;
+
+public enum PlayType : short
+{
+    StartGame = 0x0024,
+    EnterGame = 0x0022,
+    PersonalFoul = 0x000D,
+    LeaveGame = 0x0023,
+    Turnover = 0x000B,
+    Steal = 0x000A,
+    Attempted3 = 0x0003,
+    DefensiveRebound = 0x0008,
+    Made2 = 0x0002,
+    Attempted2 = 0x0001,
+    OffensiveRebound = 0x0007,
+    OffensiveFoul = 0x000E,
+    ChargeTaken = 0x0010,
+    Block = 0x000C,
+    Made3 = 0x0004,
+    MadeFreeThrow = 0x0006,
+    JumpBallLoss = 0x0019,
+    JumpBallWin = 0x001A,
+    Assist = 0x0009,
+    FoulDrawn = 0x0044,
+    PartialTimeOut = 0x0012,
+    AttemptedFreeThrow = 0x0005,
+    SecondQuarter = 0x0025,
+    ThirdQuarter = 0x0027,
+    FourthQuarter = 0x0028,
+    TechnicalFoul = 0x000F,
+    TimeMarker = 0x0030,
+    EndOfGame = 0x0029,
+    Overtime1 = 0x002A,
+    FullTimeOut = 0x0011,
+    OfficialTimeout = 0x0031,
+    AssistAttempt = 0x0037,
+    HalfTime = 0x0026,
+    DefensiveAssist = 0x0000,
+    Overtime2 = 0x002B,
+}
